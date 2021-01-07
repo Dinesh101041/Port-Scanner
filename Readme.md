@@ -1,5 +1,5 @@
 ## Port scanner
-    This is a simple port scannerr project used to scan the ports opened in ip or any network 
+    This is a simple port scanner project used to scan the ports opened in ip or any network 
 
 # Dependencies <br>
     Threading - Allows to perform multi task
