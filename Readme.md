@@ -10,8 +10,7 @@
 ```
 git clone https://github.com/The-ARK-Technologies/Port-Scanner
 cd Port-Scanner
-bash port.py
-
+python port.py
 ```
 
 
