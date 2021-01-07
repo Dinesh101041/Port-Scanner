@@ -1,17 +1,11 @@
-# sokect programming helps to connect two nodes on network to commuunicate with each other
 import socket
 # threading help us to perfrom mulitple task
 import threading
 # queue data strcuture helps to acessmultiplrthread
 from queue import Queue
-
-
-# the ip address that you want to scan 127.0.0.1 is localhost
-target="127.0.0.1"
 queue=Queue()
 # list for ports
 open_ports=[]
-
 # setting up function
 def portscan(port):
     try:
@@ -68,8 +62,6 @@ def worker():
         # else:
             # print("Port {} is closed!".format(port))          
 
-
-
 # fun to run the scan with two parameter threads is to amount of thread to start and mode reprresent type of mode
 def run_scanner(threads, mode):
 
@@ -91,5 +83,12 @@ def run_scanner(threads, mode):
 
     print("Open ports are:", open_ports)              
 
-# 100- amount of thread  1 - type of mode
-run_scanner(100, 1)
+target = input("Enter the target ip address:\n")
+print("====++++ MODE SELECTION ++++====")
+print("\n 1. to  scans the 1023 standard ports ")
+print("\n 2. to scan the 49152 reserved ports ")
+print("\n 3. to scan the important ports ")
+print("\n 4. to scan the desired port ")
+input_mode = int(input("Enter your mode choice!\n"))
+input_threads = int(input("Enter the no.of threads eg:100\n"))
+run_scanner(input_threads, input_mode)
